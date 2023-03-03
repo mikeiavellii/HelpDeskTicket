@@ -8,14 +8,14 @@ namespace HelpDeskTicketSystem.Controllers
     [ApiController]
     public class FavoriteController : ControllerBase
     {
-        FavoriteDbContext dbContext = new FavoriteDbContext();
+        TicketDbContext dbContext = new TicketDbContext();
 
-        //[HttpGet("Favorites")]
-        //public List<Favorite> GetFavorites()
-        //{
-        //    List<Favorite> Favorites = new List<Favorite>();
-        //    Favorites.Add(dbContext);
-        //    return dbContext.Favorites;
-        //}
+        [HttpPut("Favorites")]
+        public List<Favorite> GetFavorites()
+        {
+
+            return dbContext.Favorites.ToList();
+        }
+
     }
 }
