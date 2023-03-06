@@ -10,10 +10,10 @@ import { TicketService } from 'src/app/Services/ticket.service';
 export class TicketComponent implements OnInit {
 
   Tickets: Ticket[]=[]
-  constructor(private tixService:TicketService ) { }
+  constructor(private ticketService:TicketService ) { }
 
   ngOnInit(): void {
-    this.tixService.getTickets().subscribe((response:Ticket[]) =>{
+    this.ticketService.GetTickets().subscribe((response:Ticket[]) =>{
       console.log(response);
       this.Tickets = response;
     });

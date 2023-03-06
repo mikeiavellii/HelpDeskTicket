@@ -10,7 +10,7 @@ export class TicketService {
 
   constructor(@Inject ('BASE_URL') private baseUrl: string, private http:HttpClient) { }
 
-  getTickets():Observable <Ticket[]>{
-    return this.http.get<Ticket[]>(`${this.baseUrl}api/Ticket`, {});
+  GetTickets():Observable <Ticket[]>{
+    return this.http.get<Ticket[]>(`${this.baseUrl}api/Ticket/GetTickets`, {});
   }
 }

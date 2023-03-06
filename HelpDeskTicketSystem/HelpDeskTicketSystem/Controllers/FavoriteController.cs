@@ -10,12 +10,14 @@ namespace HelpDeskTicketSystem.Controllers
     {
         TicketDbContext dbContext = new TicketDbContext();
 
-        [HttpPut("Favorites")]
+        [HttpGet("GetFavorites")]
         public List<Favorite> GetFavorites()
         {
 
             return dbContext.Favorites.ToList();
         }
+
+
 
     }
 }

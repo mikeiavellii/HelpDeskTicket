@@ -10,7 +10,7 @@ namespace HelpDeskTicketSystem.Controllers
     {
         TicketDbContext dbContext = new TicketDbContext();
 
-        [HttpGet("Tickets")]
+        [HttpGet("GetTickets")]
         public List<Ticket> GetTickets()
         {
             return dbContext.Tickets.ToList();
